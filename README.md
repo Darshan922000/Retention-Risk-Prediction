@@ -1,8 +1,8 @@
-# Client Segmentation & Retention Risk Prediction
-# Integration with an External API
-# Automated Communication Suggestion Engine
+## Client Segmentation & Retention Risk Prediction
+## Integration with an External API
+## Automated Communication Suggestion Engine
 
-## Project Structure
+### Project Structure
 
 - `risk_prediction.ipynb`: Main analysis notebook containing data processing, visualization, and risk prediction models
 - `data/`: Directory containing client data files
