@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Client Portal</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>WB White Insurance</h1>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="email-generator">Email Generator</button>
+            <button class="tab-btn" data-tab="company-enrichment">Company Enrichment</button>
+        </div>
+
+        <div class="tab-content active" id="email-generator">
+            <h2>Email Generator</h2>
+            <form id="email-form">
+                <div class="form-group">
+                    <label for="client_name">Client Name*</label>
+                    <input type="text" id="client_name" name="client_name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="policy_type">Policy Type*</label>
+                    <input type="text" id="policy_type" name="policy_type" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="policy_start_date">Policy Start Date*</label>
+                    <input type="date" id="policy_start_date" name="policy_start_date" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="annual_premium">Annual Premium*</label>
+                    <input type="number" id="annual_premium" name="annual_premium" step="0.01" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="claims_last_3_years">Claims in Last 3 Years*</label>
+                    <input type="number" id="claims_last_3_years" name="claims_last_3_years" min="0" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="communication_frequency">Communication Frequency*</label>
+                    <select id="communication_frequency" name="communication_frequency" required>
+                        <option value="">Select frequency</option>
+                        <option value="Annually">Annually</option>
+                        <option value="Quarterly">Quarterly</option>
+                        <option value="Monthly">Monthly</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="client_tenure_years">Client Tenure (Years)*</label>
+                    <input type="number" id="client_tenure_years" name="client_tenure_years" min="0" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="industry">Industry*</label>
+                    <input type="text" id="industry" name="industry" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="region">Region*</label>
+                    <select id="region" name="region" required>
+                        <option value="">Select region</option>
+                        <option value="Durham">Durham</option>
+                        <option value="Ajax">Ajax</option>
+                        <option value="Oshawa">Oshawa</option>
+                        <option value="Whitby">Whitby</option>
+                        <option value="Pickering">Pickering</option>
+                        <option value="Toronto">Toronto</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Risk Score*</label>
+                    <div class="risk-score-buttons">
+                        <button type="button" class="risk-btn" data-value="Low">Low</button>
+                        <button type="button" class="risk-btn" data-value="Medium">Medium</button>
+                        <button type="button" class="risk-btn" data-value="High">High</button>
+                    </div>
+                    <input type="hidden" id="risk_score" name="risk_score" required>
+                </div>
+                
+                <button type="submit" class="submit-btn">Generate Email</button>
+            </form>
+            
+            <div class="result-container" id="email-result">
+                <h3>Generated Email:</h3>
+                <div id="email-content" class="markdown-content"></div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="company-enrichment">
+            <h2>Company Enrichment</h2>
+            <form id="enrichment-form">
+                <div class="form-group">
+                    <label for="company_linkedin_url">Company LinkedIn URL*</label>
+                    <input type="url" id="company_linkedin_url" name="company_linkedin_url" required 
+                           placeholder="https://www.linkedin.com/company/company-name">
+                </div>
+                
+                <button type="submit" class="submit-btn">Enrich Company Data</button>
+            </form>
+            
+            <div class="result-container" id="enrichment-result">
+                <h3>Company Data:</h3>
+                <pre id="company-data"></pre>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html> 

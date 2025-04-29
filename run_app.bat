@@ -1,0 +1,3 @@
+@echo off
+echo Starting Insurance Client Portal...
+python main.py 

@@ -1,0 +1,27 @@
+[project]
+name = "project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "catboost>=1.2.8",
+    "fastapi>=0.115.12",
+    "langchain>=0.3.24",
+    "langchain-groq>=0.3.2",
+    "langgraph>=0.3.34",
+    "matplotlib>=3.10.1",
+    "pandas>=2.2.3",
+    "python-dotenv>=1.1.0",
+    "requests>=2.32.3",
+    "scikit-learn>=1.6.1",
+    "seaborn>=0.13.2",
+    "shap>=0.47.2",
+    "uvicorn>=0.34.2",
+    "xgboost>=3.0.0",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+]
